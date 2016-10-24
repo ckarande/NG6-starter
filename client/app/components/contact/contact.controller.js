@@ -14,7 +14,7 @@ class ContactController {
   createPost(post) {
     console.log("Post submitted", post);
     newrelic.setCustomAttribute ("ControllerName", "Contact");
-    this.$state.go('about');
+    this.$state.go('home');
 
   }
 }
