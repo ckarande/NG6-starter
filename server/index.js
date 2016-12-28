@@ -8,6 +8,8 @@ var static_path = path.join(__dirname, './../build');
 app.enable('trust proxy');
 
 app.route('/').get(function(req, res) {
+    console.log(JSON.stringify(req.headers));
+    console.log(JSON.stringify(req.query));
     res.header('Cache-Control', "max-age=60, must-revalidate, private");
     res.sendFile('index.html', {
         root: static_path
